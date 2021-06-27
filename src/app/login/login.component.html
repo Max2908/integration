@@ -1,0 +1,16 @@
+<div class="wrap">
+  <h1>Connexion</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+      <mat-form-field   class="example-full-width" appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput  type="text" formControlName='username'>
+        </mat-form-field>
+        <mat-form-field  class="example-full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName='password'>
+        </mat-form-field>
+        <button type="submit">Connexion</button>
+  </form>
+
+  <span [routerLink]="['/create-user']" routerLinkActive="router-link-active" >Créer un utilisteur</span>
+</div>
